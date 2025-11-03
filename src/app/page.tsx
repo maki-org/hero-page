@@ -15,7 +15,7 @@ export default function Page(): JSX.Element {
               alt="Maki logo"
               src="/assets/icon.png"
             />
-            <h1 className="[font-family:'Crimson_Text-Regular',Helvetica] font-normal text-black text-xl tracking-[0] leading-[32.7px] whitespace-nowrap">
+            <h1 className="crimson font-normal text-black text-xl tracking-[0] leading-[32.7px] whitespace-nowrap">
               maki
             </h1>
           </header>
@@ -35,7 +35,8 @@ export default function Page(): JSX.Element {
               alt="Maki logo"
               src="/assets/icon.png"
             />
-            <h1 className="[font-family:'Crimson_Text-Regular',Helvetica] font-normal text-black text-xl sm:text-2xl tracking-[0] leading-[32.7px] whitespace-nowrap">
+
+            <h1 className="crimson font-normal text-black text-xl tracking-[0] leading-[32.7px] whitespace-nowrap">
               maki
             </h1>
           </header>
@@ -43,27 +44,23 @@ export default function Page(): JSX.Element {
           {/* Main Content */}
           <section className="w-full max-w-[500px] flex flex-col gap-8 sm:gap-10 md:gap-[52px]">
             {/* Headline - Responsive sizing */}
-            <h2 className="[font-family:'Crimson_Text-Regular',Helvetica] font-normal text-black text-3xl sm:text-4xl md:text-5xl lg:text-[56px] leading-tight md:leading-[56px]">
+            <h2 className="crimson font-normal text-black text-3xl sm:text-4xl md:text-5xl lg:text-[56px] leading-tight md:leading-[56px]">
               Your Personal <br /> Assistant
             </h2>
 
             <div className="flex flex-col items-start gap-6 sm:gap-8 md:gap-9 w-full">
               {/* Description - Responsive text */}
-              <p className="opacity-90 [font-family:'Crimson_Text-Regular',Helvetica] font-normal text-black text-base sm:text-lg md:text-xl leading-relaxed md:leading-6 max-w-prose">
-                Meet your personal assistant - a comprehensive platform offering
+              <p className="crimson font-normal text-black opacity-90 text-base sm:text-lg md:text-xl leading-relaxed md:leading-6 max-w-prose">
+                Meet your personal assistant — a comprehensive platform offering
                 tools for tracking your actions, reminders, maintaining personal
                 intelligence and remembering every conversation.
               </p>
 
               {/* CTA Button with Icon */}
-              <button
-                className="flex items-center justify-center gap-2 px-5 py-3 sm:px-6 sm:py-3.5 bg-black rounded-full hover:bg-gray-800 transition-all duration-200 group"
-                aria-label="Try for Free"
-              >
-                <span className="[font-family:'Poppins-SemiBold',Helvetica] font-semibold text-white text-sm sm:text-base leading-tight whitespace-nowrap">
+              <button className="flex items-center justify-center gap-2 px-5 py-3 sm:px-6 sm:py-3.5 bg-black rounded-full hover:bg-gray-800 transition-all duration-200 group">
+                <span className="poppins-semibold text-white text-sm sm:text-base leading-tight whitespace-nowrap">
                   Try for Free
                 </span>
-                {/* Arrow Icon */}
                 <svg
                   className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:translate-x-0.5 transition-transform"
                   fill="none"
@@ -101,7 +98,7 @@ export default function Page(): JSX.Element {
                     />
                   </svg>
                 </div>
-                <h3 className="[font-family:'Crimson_Text-Regular',Helvetica] font-normal text-black text-xl sm:text-2xl md:text-[28px] tracking-[0.56px] leading-tight opacity-80">
+                <h3 className="crimson font-normal text-black text-xl sm:text-2xl md:text-[28px] tracking-[0.56px] leading-tight opacity-80">
                   Recollect
                 </h3>
               </div>
@@ -128,7 +125,7 @@ export default function Page(): JSX.Element {
                     />
                   </svg>
                 </div>
-                <h3 className="[font-family:'Crimson_Text-Regular',Helvetica] font-normal text-black text-xl sm:text-2xl md:text-[28px] tracking-[0.56px] leading-tight opacity-80">
+                <h3 className="crimson font-normal text-black text-xl sm:text-2xl md:text-[28px] tracking-[0.56px] leading-tight opacity-80">
                   Record
                 </h3>
               </div>
@@ -155,7 +152,7 @@ export default function Page(): JSX.Element {
                     />
                   </svg>
                 </div>
-                <h3 className="[font-family:'Crimson_Text-Regular',Helvetica] font-normal text-black text-xl sm:text-2xl md:text-[28px] tracking-[0.56px] leading-tight opacity-80">
+                <h3 className="crimson font-normal text-black text-xl sm:text-2xl md:text-[28px] tracking-[0.56px] leading-tight opacity-80">
                   Rebuild
                 </h3>
               </div>
@@ -182,7 +179,7 @@ export default function Page(): JSX.Element {
                     />
                   </svg>
                 </div>
-                <h3 className="[font-family:'Crimson_Text-Regular',Helvetica] font-normal text-black text-xl sm:text-2xl md:text-[28px] tracking-[0.56px] leading-tight opacity-80">
+                <h3 className="crimson font-normal text-black text-xl sm:text-2xl md:text-[28px] tracking-[0.56px] leading-tight opacity-80">
                   Reorganise
                 </h3>
               </div>
