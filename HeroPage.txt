@@ -1,0 +1,290 @@
+///index.tsx//
+
+
+import React from "react";
+import asciiArt11 from "./ascii-art-1-1.png";
+import geminiGeneratedImageO5Q608O5Q608O5Q61 from "./gemini-generated-image-o5q608o5q608o5q6-1.png";
+import vector from "./vector.svg";
+
+export const MakiLandingPage = (): JSX.Element => {
+  const features = [
+    { text: "Record.", top: "669px", left: "106px" },
+    { text: "Remember.", top: "730px", left: "288px" },
+    { text: "Recognize.", top: "769px", left: "106px" },
+    { text: "Reorganize.", top: "830px", left: "288px" },
+  ];
+
+  return (
+    <main className="bg-white w-full min-w-[1440px] min-h-[1024px] relative">
+      <header className="absolute top-[42px] left-[38px] flex items-center gap-[9px]">
+        <img
+          className="w-[51px] h-[51px] aspect-[1.01] object-cover"
+          alt="Maki logo"
+          src={geminiGeneratedImageO5Q608O5Q608O5Q61}
+        />
+        <h1 className="[font-family:'Crimson_Text-Regular',Helvetica] font-normal text-black text-2xl tracking-[0] leading-[32.7px] whitespace-nowrap">
+          maki
+        </h1>
+      </header>
+
+      <section className="flex flex-col w-[388px] items-start gap-[52px] absolute top-[209px] left-16">
+        <h2 className="relative self-stretch mt-[-1.00px] [font-family:'Crimson_Text-Regular',Helvetica] font-normal text-black text-[56px] tracking-[0] leading-[56px]">
+          Your Personal <br />
+          Assistant
+        </h2>
+
+        <div className="flex flex-col items-start gap-9 relative self-stretch w-full flex-[0_0_auto]">
+          <p className="relative self-stretch mt-[-1.00px] opacity-90 [font-family:'Crimson_Text-Regular',Helvetica] font-normal text-black text-xl tracking-[0] leading-6">
+            Meet your personal assistant - a comprehensive platform offering
+            tools for tracking your actions, reminders, maintaining personal
+            intelligence and remembering every conversation.
+          </p>
+
+          <button
+            className="flex w-[140px] h-[54px] items-center justify-center gap-2.5 px-[15px] py-[11px] relative bg-black rounded-[100px] overflow-hidden hover:bg-gray-800 transition-colors"
+            aria-label="Try for Free"
+          >
+            <span className="inline-flex items-center gap-2 relative flex-[0_0_auto]">
+              <span className="relative w-fit mt-[-1.00px] [font-family:'Poppins-SemiBold',Helvetica] font-semibold text-white text-sm tracking-[0] leading-[19.2px] whitespace-nowrap">
+                Try for Free
+              </span>
+
+              <span
+                className="relative w-[19.2px] h-[19.2px] aspect-[1]"
+                aria-hidden="true"
+              >
+                <img
+                  className="absolute w-[50.00%] h-[33.33%] top-[30.21%] left-[21.88%]"
+                  alt=""
+                  src={vector}
+                />
+              </span>
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <div className="absolute top-[669px] left-[106px]">
+        {features.map((feature, index) => (
+          <div
+            key={index}
+            className="absolute opacity-80 [font-family:'Crimson_Text-Regular',Helvetica] font-normal text-black text-[28px] tracking-[0.56px] leading-[22px]"
+            style={{
+              top: `calc(${feature.top} - 669px)`,
+              left: `calc(${feature.left} - 106px)`,
+            }}
+          >
+            {feature.text}
+          </div>
+        ))}
+      </div>
+
+      <div className="flex flex-col w-[126px] items-start gap-[100px] absolute top-[669px] left-[106px]">
+        <div className="relative self-stretch mt-[-1.00px] opacity-80 [font-family:'Crimson_Text-Regular',Helvetica] font-normal text-black text-[28px] tracking-[0.56px] leading-[22px]">
+          Record.
+        </div>
+
+        <div className="relative self-stretch opacity-80 [font-family:'Crimson_Text-Regular',Helvetica] font-normal text-black text-[28px] tracking-[0.56px] leading-[22px]">
+          Recognize.
+        </div>
+      </div>
+
+      <div className="flex flex-col w-[137px] items-start gap-[100px] absolute top-[730px] left-72">
+        <div className="relative self-stretch mt-[-1.00px] opacity-80 [font-family:'Crimson_Text-Regular',Helvetica] font-normal text-black text-[28px] tracking-[0.56px] leading-[22px]">
+          Remember.
+        </div>
+
+        <div className="relative self-stretch opacity-80 [font-family:'Crimson_Text-Regular',Helvetica] font-normal text-black text-[28px] tracking-[0.56px] leading-[22px]">
+          Reorganize.
+        </div>
+      </div>
+
+      <img
+        className="absolute top-[calc(50.00%_-_512px)] right-0 w-[809px] h-[1024px] aspect-[0.79]"
+        alt="ASCII art visualization"
+        src={asciiArt11}
+      />
+    </main>
+  );
+};
+
+
+
+
+///tailwind.config.js///
+
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        "cut-mule-87308980-figma-site-color-black-40":
+          "var(--cut-mule-87308980-figma-site-color-black-40)",
+        "cut-mule-87308980-figma-site-color-black-solid":
+          "var(--cut-mule-87308980-figma-site-color-black-solid)",
+        "cut-mule-87308980-figma-site-color-grey-15-80":
+          "var(--cut-mule-87308980-figma-site-color-grey-15-80)",
+        "cut-mule-87308980-figma-site-color-grey-4":
+          "var(--cut-mule-87308980-figma-site-color-grey-4)",
+        "cut-mule-87308980-figma-site-color-grey-98":
+          "var(--cut-mule-87308980-figma-site-color-grey-98)",
+        "cut-mule-87308980-figma-site-color-white-10":
+          "var(--cut-mule-87308980-figma-site-color-white-10)",
+        "cut-mule-87308980-figma-site-color-white-solid":
+          "var(--cut-mule-87308980-figma-site-color-white-solid)",
+      },
+    },
+  },
+  plugins: [],
+};
+
+
+
+
+///tailwind.css///
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  button,
+  input,
+  select,
+  textarea {
+    @apply appearance-none bg-transparent border-0 outline-none;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --cut-mule-87308980-figma-site-color-black-40: rgba(0, 0, 0, 0.4);
+  --cut-mule-87308980-figma-site-color-black-solid: rgba(0, 0, 0, 1);
+  --cut-mule-87308980-figma-site-color-grey-15-80: rgba(38, 38, 38, 0.8);
+  --cut-mule-87308980-figma-site-color-grey-4: rgba(10, 10, 10, 1);
+  --cut-mule-87308980-figma-site-color-grey-98: rgba(250, 250, 250, 1);
+  --cut-mule-87308980-figma-site-color-white-10: rgba(255, 255, 255, 0.1);
+  --cut-mule-87308980-figma-site-color-white-solid: rgba(255, 255, 255, 1);
+  --cut-mule-87308980-figma-site-height-1200: 1200px;
+  --cut-mule-87308980-figma-site-stroke-weight-1: 1px;
+}
+
+:root {
+  --animate-spin: spin 1s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
+
+.animate-spin {
+  animation: var(--animate-spin);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes image-glow {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1);
+  }
+
+  10% {
+    opacity: 0.7;
+    animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99);
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  90%,
+  to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+
+  30%,
+  60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+
