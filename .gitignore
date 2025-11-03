@@ -16,7 +16,6 @@ node_modules
 .env.test
 .env.production
 
-# pnpm-lock.yaml
-pnpm-lock.yaml
+
 
 .DS_Store
