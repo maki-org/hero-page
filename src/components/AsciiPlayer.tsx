@@ -117,7 +117,18 @@ export default function AsciiPlayer(): JSX.Element {
       <pre
         id="trace"
         ref={preRef}
-        className="w-full max-w-[600px] font-mono border border-dashed  m-0 overflow-hidden"
+        style={{
+          width: "100%",
+          height: "100vh",
+          margin: 0,
+          padding: 0,
+          fontFamily: "monospace",
+          overflow: "hidden",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          border: "none",
+        }}
       >
         <span id="trace-chars" ref={spanRef} />
       </pre>

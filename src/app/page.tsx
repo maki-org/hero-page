@@ -93,7 +93,11 @@ export default function Page(): JSX.Element {
           </div>
         </div>
 
-        <div className="flex items-center justify-center p-6 order-2 md:order-2">
+        {/* ANIMATION - NO PADDING, FULL WIDTH AND HEIGHT */}
+        <div
+          className="order-2 md:order-2"
+          style={{ width: "100%", height: "100vh" }}
+        >
           <AsciiPlayer />
         </div>
       </div>
