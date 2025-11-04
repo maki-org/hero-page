@@ -3,6 +3,11 @@ node_modules
 
 # Build
 .next
+.vercel
+
+# Wrangler
+.wrangler
+.dev.vars
 
 # Environment variables
 .env
