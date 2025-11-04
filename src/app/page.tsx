@@ -45,7 +45,7 @@ export default function Page(): JSX.Element {
 
               {/* CTA Button with Icon */}
               <a
-                href="https://app.maki.ai"
+                href="https://app.heymaki.ai"
                 className="flex items-center justify-center gap-2 px-6 py-3.5 sm:px-8 sm:py-4 bg-black rounded-full hover:bg-gray-800 transition-all duration-200 group"
               >
                 <span className="poppins-semibold text-white text-sm sm:text-base leading-tight whitespace-nowrap">
