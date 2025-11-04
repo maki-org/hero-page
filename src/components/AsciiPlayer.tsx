@@ -66,10 +66,7 @@ export default function AsciiPlayer(): JSX.Element {
 
       const fit = () => {
         ctx.font = `${fontSize}px ${fontFace}`;
-        return (
-          ctx.measureText(longestLine).width * charRatio <=
-          containerWidth * 0.95
-        );
+        return ctx.measureText(longestLine).width * charRatio <= containerWidth;
       };
 
       while (fontSize > 1 && !fit()) {
@@ -82,8 +79,8 @@ export default function AsciiPlayer(): JSX.Element {
 
       // Check vertical fit
       const totalHeight = lines.length * charHeight;
-      if (totalHeight > containerHeight * 0.95) {
-        const verticalScale = (containerHeight * 0.95) / totalHeight;
+      if (totalHeight > containerHeight) {
+        const verticalScale = containerHeight / totalHeight;
         fontSize = fontSize * verticalScale;
       }
 

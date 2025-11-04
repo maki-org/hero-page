@@ -3,23 +3,23 @@ import AsciiPlayer from "../components/AsciiPlayer";
 
 export default function Page(): JSX.Element {
   return (
-    <main className="bg-white w-full min-h-screen overflow-hidden">
-      {/* Desktop: Grid layout, Mobile: Stack layout */}
-      <div className="flex flex-col md:grid md:grid-cols-2 min-h-screen w-full">
-        {/* ASCII ANIMATION - Top on mobile with header overlay, Right on desktop */}
-        <div className="order-1 md:order-2 relative h-[50vh] md:h-screen w-full">
-          {/* Mobile-only header overlay */}
-          <header className="md:hidden  top-6 left-6 z-10 flex items-center gap-2 fixed">
-            <img
-              className="w-10 h-10 object-cover"
-              alt="Maki logo"
-              src="/assets/icon.png"
-            />
-            <h1 className="crimson font-normal text-black text-xl tracking-[0] leading-[32.7px] whitespace-nowrap">
-              maki
-            </h1>
-          </header>
+    <main className="bg-white w-full h-screen overflow-hidden relative">
+      {/* Logo - Top left corner for all screen sizes */}
+      <header className="absolute top-6 left-6 md:top-8 md:left-8 lg:top-10 lg:left-10 z-20 flex items-center gap-2">
+        <img
+          className="w-10 h-10 md:w-[51px] md:h-[51px] aspect-[1.01] object-cover"
+          alt="Maki logo"
+          src="/assets/icon.png"
+        />
+        <h1 className="crimson font-normal text-black text-xl tracking-[0] leading-[32.7px] whitespace-nowrap">
+          maki
+        </h1>
+      </header>
 
+      {/* Desktop: Grid layout, Mobile: Stack layout */}
+      <div className="flex flex-col md:grid md:grid-cols-2 h-full w-full">
+        {/* ASCII ANIMATION - Top on mobile, Right on desktop */}
+        <div className="order-1 md:order-2 relative h-[50vh] md:h-full w-full overflow-hidden">
           {/* Full-width animation container */}
           <div className="w-full h-full">
             <AsciiPlayer />
@@ -27,28 +27,15 @@ export default function Page(): JSX.Element {
         </div>
 
         {/* LEFT COLUMN - Text content - Bottom on mobile, Left on desktop */}
-        <div className="order-2 md:order-1 relative p-6 sm:p-8 md:p-12 lg:p-16 flex flex-col justify-center min-h-[50vh] md:min-h-screen">
-          {/* Desktop-only header */}
-          <header className="hidden md:flex items-center gap-2 sm:gap-[9px] mb-8 md:mb-12 absolute top-10 left-10 z-10">
-            <img
-              className="w-10 h-10 sm:w-[45px] sm:h-[45px] md:w-[51px] md:h-[51px] aspect-[1.01] object-cover"
-              alt="Maki logo"
-              src="/assets/icon.png"
-            />
-
-            <h1 className="crimson font-normal text-black text-xl tracking-[0] leading-[32.7px] whitespace-nowrap">
-              maki
-            </h1>
-          </header>
-
+        <div className="order-2 md:order-1 relative p-6 sm:p-8 md:pl-20 md:pr-12 lg:pl-24 lg:pr-16 flex flex-col justify-center h-[50vh] md:h-full pt-20 md:pt-24 overflow-hidden">
           {/* Main Content */}
-          <section className="w-full max-w-[500px] flex flex-col gap-10 sm:gap-12 md:gap-16">
+          <section className="w-full max-w-[500px] flex flex-col gap-8 sm:gap-10 md:gap-12">
             {/* Headline - Responsive sizing */}
             <h2 className="crimson font-normal text-black text-3xl sm:text-4xl md:text-5xl lg:text-[56px] leading-tight md:leading-[56px]">
               Your Personal <br /> Assistant
             </h2>
 
-            <div className="flex flex-col items-start gap-8 sm:gap-10 md:gap-12 w-full">
+            <div className="flex flex-col items-start gap-6 sm:gap-8 md:gap-10 w-full">
               {/* Description - Responsive text */}
               <p className="crimson font-normal text-black opacity-90 text-base sm:text-lg md:text-xl leading-relaxed md:leading-6 max-w-prose">
                 Meet your personal assistant — a comprehensive platform offering
@@ -57,7 +44,10 @@ export default function Page(): JSX.Element {
               </p>
 
               {/* CTA Button with Icon */}
-              <button className="flex items-center justify-center gap-2 px-6 py-3.5 sm:px-8 sm:py-4 bg-black rounded-full hover:bg-gray-800 transition-all duration-200 group">
+              <a
+                href="https://app.maki.ai"
+                className="flex items-center justify-center gap-2 px-6 py-3.5 sm:px-8 sm:py-4 bg-black rounded-full hover:bg-gray-800 transition-all duration-200 group"
+              >
                 <span className="poppins-semibold text-white text-sm sm:text-base leading-tight whitespace-nowrap">
                   Try for Free
                 </span>
@@ -74,12 +64,12 @@ export default function Page(): JSX.Element {
                     d="M13 7l5 5m0 0l-5 5m5-5H6"
                   />
                 </svg>
-              </button>
+              </a>
             </div>
           </section>
 
           {/* Feature Grid - Responsive layout */}
-          <div className="mt-20 md:mt-28 grid grid-cols-2 gap-x-10 gap-y-14 sm:gap-x-12 sm:gap-y-16 md:gap-x-16 md:gap-y-20 max-w-[500px]">
+          <div className="mt-12 md:mt-16 grid grid-cols-2 gap-x-8 gap-y-10 sm:gap-x-10 sm:gap-y-12 md:gap-x-12 md:gap-y-14 max-w-[500px]">
             {/* Recollect */}
             <div className="flex flex-col gap-3 sm:gap-4">
               <div className="flex items-center gap-3">
