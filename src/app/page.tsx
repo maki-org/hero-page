@@ -3,7 +3,7 @@ import AsciiPlayer from "../components/AsciiPlayer";
 
 export default function Page(): JSX.Element {
   return (
-    <main className="bg-white w-full h-screen overflow-hidden relative">
+    <main className="bg-white w-full min-h-screen md:h-screen md:overflow-hidden relative">
       {/* Logo - Top left corner for all screen sizes */}
       <header className="absolute top-6 left-6 md:top-8 md:left-8 lg:top-10 lg:left-10 z-20 flex items-center gap-2">
         <img
@@ -17,9 +17,9 @@ export default function Page(): JSX.Element {
       </header>
 
       {/* Desktop: Grid layout, Mobile: Stack layout */}
-      <div className="flex flex-col md:grid md:grid-cols-2 h-full w-full">
+      <div className="flex flex-col md:grid md:grid-cols-2 min-h-screen md:h-full w-full">
         {/* ASCII ANIMATION - Top on mobile, Right on desktop */}
-        <div className="order-1 md:order-2 relative h-[50vh] md:h-full w-full overflow-hidden">
+        <div className="order-1 md:order-2 relative h-[40vh] min-h-[300px] md:h-full w-full overflow-hidden">
           {/* Full-width animation container */}
           <div className="w-full h-full">
             <AsciiPlayer />
@@ -27,9 +27,9 @@ export default function Page(): JSX.Element {
         </div>
 
         {/* LEFT COLUMN - Text content - Bottom on mobile, Left on desktop */}
-        <div className="order-2 md:order-1 relative p-6 sm:p-8 md:pl-20 md:pr-12 lg:pl-24 lg:pr-16 flex flex-col justify-center h-[50vh] md:h-full pt-20 md:pt-24 overflow-hidden">
+        <div className="order-2 md:order-1 relative p-6 sm:p-8 md:pl-20 md:pr-12 lg:pl-24 lg:pr-16 flex flex-col justify-start md:justify-center min-h-[60vh] md:h-full pt-8 pb-12 md:pt-24 md:pb-8 overflow-y-auto md:overflow-hidden">
           {/* Main Content */}
-          <section className="w-full max-w-[500px] flex flex-col gap-8 sm:gap-10 md:gap-12">
+          <section className="w-full max-w-[500px] flex flex-col gap-6 sm:gap-8 md:gap-12">
             {/* Headline - Responsive sizing */}
             <h2 className="crimson font-normal text-black text-3xl sm:text-4xl md:text-5xl lg:text-[56px] leading-tight md:leading-[56px]">
               Your Personal <br /> Assistant
